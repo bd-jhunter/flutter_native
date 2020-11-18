@@ -34,7 +34,7 @@ class RootTabBarPageState extends State<RootTabBarPage> {
       appBar: AppBar(
         title: Text('我是一个Flutter'),
       ),
-      bottomNavigationBar: BottomNavigationBar(
+      bottomNavigationBar: Offstage(child: BottomNavigationBar(
         fixedColor: Colors.red,
         //底部导航栏按钮选中时的颜色
         type: BottomNavigationBarType.fixed,
@@ -43,15 +43,17 @@ class RootTabBarPageState extends State<RootTabBarPage> {
         onTap: _onPageChanged,
         items: _pages.map((e) => BottomNavigationBarItem(icon: e.icon, title: Text(e.title))).toList(),
       ),
+        offstage: true,
+      ),
       body: _pageView(context),
     );
   }
 
   void openTab(int index) {
     _pageController.jumpToPage(index);
-    setState(() {
-      _currentIndex = index;
-    });
+    // setState(() {
+    //   _currentIndex = index;
+    // });
   }
 
   Widget _pageView(BuildContext context) {

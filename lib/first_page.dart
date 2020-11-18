@@ -77,7 +77,7 @@ class SecondPage extends StatelessWidget {
               textColor: Colors.white,
               color: Colors.red,
               child: Text('打开第一个Tab'),
-              onPressed: _openNative,
+              onPressed: () => _openNative(context),
             ),
             _SomeDataWidget(),
             RaisedButton(
@@ -92,8 +92,11 @@ class SecondPage extends StatelessWidget {
     );
   }
 
-  void _openNative() {
+  void _openNative(BuildContext context) {
     // _methodChannelPlugin.invokeMethod('opensecond');
+    Navigator.of(context).popUntil((route) {
+      return route.isFirst;
+    });
     GlobalKey rootKey = tabBarKey;
     RootTabBarPageState rootState = rootKey.currentState;
     rootState.openTab(0);

@@ -58,6 +58,14 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
             fontSize: 16,
             onPressed: () => _pressSomeButton(context),
           ),
+          Container(
+            padding: EdgeInsets.only(top: 20, bottom: 20),
+            child: JHButtons.applyButton(
+              onPressed: _switchTab,
+              title: '切换到第二个tab',
+              height: 45,
+            ),
+          ),
         ],
       ),
     );
@@ -65,15 +73,17 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
 
   // Private methods
   void _pressSomeButton(BuildContext context) {
-    // GlobalKey rootKey = tabBarKey;
-    // RootTabBarPageState rootState = rootKey.currentState;
-    // rootState.openTab(1);
-    // return;
     Navigator.of(context).push(
         MaterialPageRoute(
           builder: (_) => FirstPage()
         )
     );
+  }
+
+  void _switchTab() {
+    GlobalKey rootKey = tabBarKey;
+    RootTabBarPageState rootState = rootKey.currentState;
+    rootState.openTab(1);
   }
 
   void _incrementCounter() {

@@ -44,19 +44,27 @@ class _ContractsPageState extends State<ContractsPage> with AutomaticKeepAliveCl
                 '$_count',
                 style: Theme.of(context).textTheme.headline4,
               )),
-          // Container(
-          //   padding: EdgeInsets.only(top: 20, bottom: 20),
-          //   child: FloatingActionButton(
-          //     onPressed: _incrementCounter,
-          //     tooltip: 'Increment',
-          //     child: Icon(Icons.add),
-          //   ),
-          // ),
+          Container(
+            padding: EdgeInsets.only(top: 20, bottom: 20),
+            child: JHButtons.applyButton(
+              onPressed: _incrementCounter,
+              title: '+++',
+                height: 30,
+            ),
+          ),
           JHButtons.applyButton(
             title: '二级页面',
             height: 45,
             fontSize: 16,
             onPressed: () => _pressSomeButton(context),
+          ),
+          Container(
+            padding: EdgeInsets.only(top: 20, bottom: 20),
+            child: JHButtons.applyButton(
+              onPressed: _switchTab,
+              title: '切换到第一个tab',
+              height: 45,
+            ),
           ),
         ],
       ),
@@ -65,15 +73,17 @@ class _ContractsPageState extends State<ContractsPage> with AutomaticKeepAliveCl
 
   // Private methods
   void _pressSomeButton(BuildContext context) {
-    // GlobalKey rootKey = tabBarKey;
-    // RootTabBarPageState rootState = rootKey.currentState;
-    // rootState.openTab(0);
-    // return;
     Navigator.of(context).push(
         MaterialPageRoute(
             builder: (_) => SecondPage()
         )
     );
+  }
+
+  void _switchTab() {
+    GlobalKey rootKey = tabBarKey;
+    RootTabBarPageState rootState = rootKey.currentState;
+    rootState.openTab(0);
   }
 
   void _incrementCounter() {
