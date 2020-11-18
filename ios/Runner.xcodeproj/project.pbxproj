@@ -19,6 +19,8 @@
 		4FABC97B254FD9F8006BBBC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FABC979254FD9F8006BBBC2 /* Main.storyboard */; };
 		4FABC97D254FD9FB006BBBC2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FABC97C254FD9FB006BBBC2 /* Assets.xcassets */; };
 		4FABC980254FD9FB006BBBC2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FABC97E254FD9FB006BBBC2 /* LaunchScreen.storyboard */; };
+		4FF3E8482564C92700401DBD /* LifecycleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FF3E8462564C92700401DBD /* LifecycleViewController.swift */; };
+		4FF3E8492564C92700401DBD /* LifecycleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4FF3E8472564C92700401DBD /* LifecycleViewController.xib */; };
 		77978E93EC540B10E48E469D /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F0D7584A00439F6F58C747 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
@@ -37,6 +39,8 @@
 		4FABC97C254FD9FB006BBBC2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FABC97F254FD9FB006BBBC2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FABC981254FD9FB006BBBC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4FF3E8462564C92700401DBD /* LifecycleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LifecycleViewController.swift; sourceTree = "<group>"; };
+		4FF3E8472564C92700401DBD /* LifecycleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LifecycleViewController.xib; sourceTree = "<group>"; };
 		8CB31148DEFAA38F9EE9765A /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		C83B1A7447361B8314505401 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		D3F0D7584A00439F6F58C747 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,6 +100,8 @@
 				42EB3B5F25612DCB00B653B8 /* JHViewController.swift */,
 				42EB3BCC25615D9C00B653B8 /* TabFirstViewController.swift */,
 				42EB3BCF25615E5900B653B8 /* RootViewController.swift */,
+				4FF3E8462564C92700401DBD /* LifecycleViewController.swift */,
+				4FF3E8472564C92700401DBD /* LifecycleViewController.xib */,
 			);
 			path = Runner;
 			sourceTree = "<group>";
@@ -172,6 +178,7 @@
 				4FABC980254FD9FB006BBBC2 /* LaunchScreen.storyboard in Resources */,
 				4FABC97D254FD9FB006BBBC2 /* Assets.xcassets in Resources */,
 				4FABC97B254FD9F8006BBBC2 /* Main.storyboard in Resources */,
+				4FF3E8492564C92700401DBD /* LifecycleViewController.xib in Resources */,
 				42EB3B5825612D1D00B653B8 /* FirstViewController.xib in Resources */,
 				42EB3B5D25612D3500B653B8 /* SecondViewController.xib in Resources */,
 			);
@@ -249,6 +256,7 @@
 				4FABC974254FD9F8006BBBC2 /* AppDelegate.swift in Sources */,
 				42EB3B6025612DCB00B653B8 /* JHViewController.swift in Sources */,
 				42EB3BCD25615D9C00B653B8 /* TabFirstViewController.swift in Sources */,
+				4FF3E8482564C92700401DBD /* LifecycleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,7 +405,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVL267SB24;
+				DEVELOPMENT_TEAM = PWUBJF64PG;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,7 +426,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = HVL267SB24;
+				DEVELOPMENT_TEAM = PWUBJF64PG;
 				INFOPLIST_FILE = Runner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

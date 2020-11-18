@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutternative/root_tab_page.dart';
+import 'main.dart';
 
 class FirstPage extends StatelessWidget {
   MethodChannel _methodChannelPlugin = const MethodChannel('com.jh.rootchannel');
@@ -21,8 +23,8 @@ class FirstPage extends StatelessWidget {
             RaisedButton(
               textColor: Colors.white,
               color: Colors.red,
-              child: Text('打开Native'),
-              onPressed: _openNative,
+              child: Text('打开第二个tab'),
+              onPressed: () => _openNative(context),
             ),
             _SomeDataWidget(),
             RaisedButton(
@@ -37,12 +39,18 @@ class FirstPage extends StatelessWidget {
     );
   }
 
-  void _openNative() {
-    _methodChannelPlugin.invokeMethod('openfirst');
+  void _openNative(BuildContext context) {
+    // _methodChannelPlugin.invokeMethod('openfirst');
+    Navigator.of(context).popUntil((route) {
+      return route.isFirst;
+    });
+    GlobalKey rootKey = tabBarKey;
+    RootTabBarPageState rootState = rootKey.currentState;
+    rootState.openTab(1);
   }
 
   void _backToNative(BuildContext context) {
-    Navigator.of(context).pop();
+    // Navigator.of(context).pop();
     _methodChannelPlugin.invokeMethod('close');
   }
 }
@@ -59,6 +67,7 @@ class SecondPage extends StatelessWidget {
       ),
       body: Container(
         padding: EdgeInsets.only(top: 20),
+        // child: Text('我是第二个Flutter页面，我是Second'),
         width: double.infinity,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +76,7 @@ class SecondPage extends StatelessWidget {
             RaisedButton(
               textColor: Colors.white,
               color: Colors.red,
-              child: Text('打开Native'),
+              child: Text('打开第一个Tab'),
               onPressed: _openNative,
             ),
             _SomeDataWidget(),
@@ -84,11 +93,14 @@ class SecondPage extends StatelessWidget {
   }
 
   void _openNative() {
-    _methodChannelPlugin.invokeMethod('opensecond');
+    // _methodChannelPlugin.invokeMethod('opensecond');
+    GlobalKey rootKey = tabBarKey;
+    RootTabBarPageState rootState = rootKey.currentState;
+    rootState.openTab(0);
   }
 
   void _backToNative(BuildContext context) {
-    Navigator.of(context).pop();
+    // Navigator.of(context).pop();
     _methodChannelPlugin.invokeMethod('close');
   }
 }
@@ -141,11 +153,12 @@ class _SomeDataState extends State<_SomeDataWidget> {
             '$_counter',
             style: Theme.of(context).textTheme.headline4,
           ),
-          FloatingActionButton(
-            onPressed: _incrementCounter,
-            tooltip: 'Increment',
+          RaisedButton(
+            textColor: Colors.white,
+            color: Colors.red,
             child: Icon(Icons.add),
-          ), // This trailing comma makes auto-formatting nicer for build methods.
+            onPressed: _incrementCounter,
+          ),
         ],
       ),
     );

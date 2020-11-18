@@ -30,14 +30,32 @@
                                     <action selector="tapFlutter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LWV-eE-jjk"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGq-qJ-R5d">
+                                <rect key="frame" x="13" y="166" width="61" height="30"/>
+                                <state key="normal" title="Lifecycle"/>
+                                <connections>
+                                    <action selector="tapLifecycle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tbO-zr-egB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onv-0O-Goe">
+                                <rect key="frame" x="240" y="777" width="30" height="30"/>
+                                <state key="normal" title="tab"/>
+                                <connections>
+                                    <action selector="tapFlutterTab:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WRP-Le-MV1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="8sv-ms-cXD" secondAttribute="bottom" constant="6" id="8DX-pd-zUU"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="8sv-ms-cXD" secondAttribute="trailing" constant="29" id="X25-hd-ebg"/>
+                            <constraint firstItem="LGq-qJ-R5d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="13" id="Zg7-c5-5s0"/>
+                            <constraint firstItem="8sv-ms-cXD" firstAttribute="centerY" secondItem="Onv-0O-Goe" secondAttribute="centerY" id="fmX-Xp-7zy"/>
+                            <constraint firstItem="8sv-ms-cXD" firstAttribute="leading" secondItem="Onv-0O-Goe" secondAttribute="trailing" constant="70" id="llU-jq-T0M"/>
                             <constraint firstItem="7ZT-2m-0MZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="mnz-Yv-1oh"/>
                             <constraint firstItem="7ZT-2m-0MZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="nhL-gu-ZYQ"/>
+                            <constraint firstItem="LGq-qJ-R5d" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="78" id="vIk-gh-Nb3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cfk-1s-mDG"/>
@@ -87,12 +105,12 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="FM2-1L-k8W" customClass="RootViewController" customModule="Runner" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CAF-Yx-oF9">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
                         <segue destination="Quh-L7-KQr" kind="relationship" relationship="viewControllers" id="rr2-ui-xUR"/>
-                        <segue destination="5rq-w1-VOR" kind="relationship" relationship="viewControllers" id="UP3-yE-eQR"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dKS-kY-yA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -116,7 +134,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9F6-OM-Bte" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="563.768115942029" y="727.90178571428567"/>
+            <point key="canvasLocation" x="564" y="835"/>
         </scene>
     </scenes>
     <resources>
