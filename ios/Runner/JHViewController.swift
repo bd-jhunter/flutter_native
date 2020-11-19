@@ -29,10 +29,27 @@ class JHViewController: FlutterViewController {
         super.viewDidAppear(animated)
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        dettachEngine()
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        dettachEngine()
+        super.viewDidDisappear(animated)
+    }
+    
     private func attachEngine() {
         let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
         if flutterEngine.viewController != self {
             flutterEngine.viewController = self
+        }
+    }
+    
+    private func dettachEngine() {
+        let flutterEngine = (UIApplication.shared.delegate as! AppDelegate).flutterEngine
+        if flutterEngine.viewController == self {
+            flutterEngine.viewController = nil
         }
     }
 }

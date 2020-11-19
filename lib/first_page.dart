@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutternative/native_data_provider.dart';
 import 'package:flutternative/root_tab_page.dart';
 import 'main.dart';
 
 class FirstPage extends StatelessWidget {
-  MethodChannel _methodChannelPlugin = const MethodChannel('com.jh.rootchannel');
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +40,8 @@ class FirstPage extends StatelessWidget {
   }
 
   void _openNative(BuildContext context) {
-    // _methodChannelPlugin.invokeMethod('openfirst');
+    NativeDataProvider().invokeMethod(PlatformMethod.openNative);
+    return;
     Navigator.of(context).popUntil((route) {
       return route.isFirst;
     });
@@ -50,8 +51,7 @@ class FirstPage extends StatelessWidget {
   }
 
   void _backToNative(BuildContext context) {
-    // Navigator.of(context).pop();
-    _methodChannelPlugin.invokeMethod('close');
+    NativeDataProvider().invokeMethod(PlatformMethod.close);
   }
 }
 
@@ -93,7 +93,8 @@ class SecondPage extends StatelessWidget {
   }
 
   void _openNative(BuildContext context) {
-    // _methodChannelPlugin.invokeMethod('opensecond');
+    NativeDataProvider().invokeMethod(PlatformMethod.openNative);
+    return;
     Navigator.of(context).popUntil((route) {
       return route.isFirst;
     });
@@ -103,8 +104,7 @@ class SecondPage extends StatelessWidget {
   }
 
   void _backToNative(BuildContext context) {
-    // Navigator.of(context).pop();
-    _methodChannelPlugin.invokeMethod('close');
+    NativeDataProvider().invokeMethod(PlatformMethod.close);
   }
 }
 

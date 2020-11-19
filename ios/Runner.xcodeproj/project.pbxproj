@@ -14,6 +14,10 @@
 		42EB3B6025612DCB00B653B8 /* JHViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3B5F25612DCB00B653B8 /* JHViewController.swift */; };
 		42EB3BCD25615D9C00B653B8 /* TabFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3BCC25615D9C00B653B8 /* TabFirstViewController.swift */; };
 		42EB3BD025615E5900B653B8 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42EB3BCF25615E5900B653B8 /* RootViewController.swift */; };
+		4F4AEC5F25661CC4004B26D7 /* MainStarter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AEC5E25661CC4004B26D7 /* MainStarter.swift */; };
+		4F4AEC6325662071004B26D7 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AEC6225662071004B26D7 /* HomePageViewController.swift */; };
+		4F4AEC6625663E4B004B26D7 /* ContractsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AEC6525663E4B004B26D7 /* ContractsViewController.swift */; };
+		4F4AEC6925663E57004B26D7 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F4AEC6825663E57004B26D7 /* SettingViewController.swift */; };
 		4FABC974254FD9F8006BBBC2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FABC973254FD9F8006BBBC2 /* AppDelegate.swift */; };
 		4FABC978254FD9F8006BBBC2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FABC977254FD9F8006BBBC2 /* ViewController.swift */; };
 		4FABC97B254FD9F8006BBBC2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FABC979254FD9F8006BBBC2 /* Main.storyboard */; };
@@ -32,6 +36,10 @@
 		42EB3B5F25612DCB00B653B8 /* JHViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JHViewController.swift; sourceTree = "<group>"; };
 		42EB3BCC25615D9C00B653B8 /* TabFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabFirstViewController.swift; sourceTree = "<group>"; };
 		42EB3BCF25615E5900B653B8 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		4F4AEC5E25661CC4004B26D7 /* MainStarter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStarter.swift; sourceTree = "<group>"; };
+		4F4AEC6225662071004B26D7 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		4F4AEC6525663E4B004B26D7 /* ContractsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractsViewController.swift; sourceTree = "<group>"; };
+		4F4AEC6825663E57004B26D7 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		4FABC970254FD9F8006BBBC2 /* Runner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Runner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4FABC973254FD9F8006BBBC2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4FABC977254FD9F8006BBBC2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -66,6 +74,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4F4AEC5D25661C89004B26D7 /* tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				4F4AEC5E25661CC4004B26D7 /* MainStarter.swift */,
+				4F4AEC6225662071004B26D7 /* HomePageViewController.swift */,
+				4F4AEC6525663E4B004B26D7 /* ContractsViewController.swift */,
+				4F4AEC6825663E57004B26D7 /* SettingViewController.swift */,
+			);
+			path = tabbar;
+			sourceTree = "<group>";
+		};
 		4FABC967254FD9F8006BBBC2 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +106,7 @@
 		4FABC972254FD9F8006BBBC2 /* Runner */ = {
 			isa = PBXGroup;
 			children = (
+				4F4AEC5D25661C89004B26D7 /* tabbar */,
 				4FABC973254FD9F8006BBBC2 /* AppDelegate.swift */,
 				4FABC977254FD9F8006BBBC2 /* ViewController.swift */,
 				4FABC979254FD9F8006BBBC2 /* Main.storyboard */,
@@ -252,11 +272,15 @@
 				42EB3B5C25612D3500B653B8 /* SecondViewController.swift in Sources */,
 				42EB3B5725612D1D00B653B8 /* FirstViewController.swift in Sources */,
 				4FABC978254FD9F8006BBBC2 /* ViewController.swift in Sources */,
+				4F4AEC5F25661CC4004B26D7 /* MainStarter.swift in Sources */,
+				4F4AEC6625663E4B004B26D7 /* ContractsViewController.swift in Sources */,
 				42EB3BD025615E5900B653B8 /* RootViewController.swift in Sources */,
 				4FABC974254FD9F8006BBBC2 /* AppDelegate.swift in Sources */,
 				42EB3B6025612DCB00B653B8 /* JHViewController.swift in Sources */,
 				42EB3BCD25615D9C00B653B8 /* TabFirstViewController.swift in Sources */,
+				4F4AEC6325662071004B26D7 /* HomePageViewController.swift in Sources */,
 				4FF3E8482564C92700401DBD /* LifecycleViewController.swift in Sources */,
+				4F4AEC6925663E57004B26D7 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

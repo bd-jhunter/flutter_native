@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternative/first_page.dart';
+import 'package:flutternative/util/tab_bar_controller.dart';
 
 import '../root_tab_page.dart';
 import 'common_widgets.dart';
@@ -81,9 +82,10 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
   }
 
   void _switchTab() {
-    GlobalKey rootKey = tabBarKey;
-    RootTabBarPageState rootState = rootKey.currentState;
-    rootState.openTab(1);
+    // GlobalKey rootKey = tabBarKey;
+    // RootTabBarPageState rootState = rootKey.currentState;
+    // rootState.openTab(1);
+    TabBarController().switchTabBar(1);
   }
 
   void _incrementCounter() {

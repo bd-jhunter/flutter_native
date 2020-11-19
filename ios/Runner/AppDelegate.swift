@@ -20,6 +20,7 @@ class AppDelegate: FlutterAppDelegate {
         flutterEngine.run();
         // Used to connect plugins (only if you have plugins with iOS platform code).
         GeneratedPluginRegistrant.register(with: self.flutterEngine);
+        MainStarter.shared.start()
         return super.application(application, didFinishLaunchingWithOptions: launchOptions);    }
     
 }

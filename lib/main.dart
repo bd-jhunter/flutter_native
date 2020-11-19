@@ -5,8 +5,10 @@ import 'package:flutternative/root_tab_page.dart';
 import 'package:flutternative/tabbar/contracts_page.dart';
 import 'package:flutternative/tabbar/home_page.dart';
 import 'package:flutternative/tabbar/setting_page.dart';
+import 'package:flutternative/util/navigator_config.dart';
 
 import 'first_page.dart';
+import 'native_data_provider.dart';
 
 GlobalKey<RootTabBarPageState> tabBarKey = GlobalKey<RootTabBarPageState>();
 
@@ -16,9 +18,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    NativeDataProvider();
     List<ITopPage> pages = [HomePage(), ContractsPage(), SettingPage()];
     var home = RootTabBarPage(key: tabBarKey, pages: pages);
     return MaterialApp(
+      navigatorKey: NavigatorConfig.navigatorKey,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.

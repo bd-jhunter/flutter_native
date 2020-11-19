@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutternative/util/tab_bar_controller.dart';
 
 mixin ITopPage {
   String get title;
@@ -23,7 +24,7 @@ class RootTabBarPage extends StatefulWidget {
 
 class RootTabBarPageState extends State<RootTabBarPage> {
   final List<ITopPage> _pages;
-  final PageController _pageController = PageController(keepPage: true);
+  final PageController _pageController = TabBarController().pageController;
   int _currentIndex = 0;
 
   RootTabBarPageState(this._pages);

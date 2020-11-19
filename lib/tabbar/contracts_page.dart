@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutternative/first_page.dart';
 import 'package:flutternative/tabbar/common_widgets.dart';
+import 'package:flutternative/util/tab_bar_controller.dart';
 import '../main.dart';
 
 import '../root_tab_page.dart';
@@ -81,9 +82,10 @@ class _ContractsPageState extends State<ContractsPage> with AutomaticKeepAliveCl
   }
 
   void _switchTab() {
-    GlobalKey rootKey = tabBarKey;
-    RootTabBarPageState rootState = rootKey.currentState;
-    rootState.openTab(0);
+    // GlobalKey rootKey = tabBarKey;
+    // RootTabBarPageState rootState = rootKey.currentState;
+    // rootState.openTab(0);
+    TabBarController().switchTabBar(0);
   }
 
   void _incrementCounter() {
